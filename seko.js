@@ -94,49 +94,48 @@ function polling(level, room_id=null, first=true){
       document.getElementById("seko_comment").innerText = "完了";
       return;
     }
-
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
-      if (xhr.readyState == 4) {
-        // clearInterval(interval);
-        console.log("polling:" + xhr.status);
-        if (xhr.status == 200) {
-          var json = JSON.parse(xhr.responseText);
-          if(json.live_watch_incentive){
-            // 成功
-            if(json.live_watch_incentive.ok){
-              // アイテム取得
-              console.log("polling:get");
-              document.getElementById("seko_comment").innerText = "GET！";
-              // 次の回収
-              polling(level, getRoomId(level), true);
-            }else if(json.live_watch_incentive.error == 1){
-              // 制限されています
-              console.log("polling:limit");
-              document.getElementById("seko_comment").innerText = "制限中";
-            }else{
-              if(first){
-                // 初回トライ
-                console.log("polling:try");
-                document.getElementById("seko_comment").innerText = "回収中";
-                // 30秒後にもう一度叩く
-                setTimeout(function(){
-                  polling(level, room_id, false);
-                }, 30000);
-              }else{
-                // ２回目トライ
-                console.log("polling:error");
-                document.getElementById("seko_comment").innerText = "失敗！";
+    setTimeout(function(){
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+        if (xhr.readyState == 4) {
+          // clearInterval(interval);
+          console.log("polling:" + xhr.status);
+          if (xhr.status == 200) {
+            var json = JSON.parse(xhr.responseText);
+            if(json.live_watch_incentive){
+              // 成功
+              if(json.live_watch_incentive.ok){
+                // アイテム取得
+                console.log("polling:get");
+                document.getElementById("seko_comment").innerText = "GET！";
+                // 次の回収
                 polling(level, getRoomId(level), true);
+              }else if(json.live_watch_incentive.error == 1){
+                // 制限されています
+                console.log("polling:limit");
+                document.getElementById("seko_comment").innerText = "制限中";
+              }else{
+                if(first){
+                  // 初回トライ
+                  console.log("polling:try");
+                  document.getElementById("seko_comment").innerText = "回収中";
+                  // 30秒後にもう一度叩く
+                  polling(level, room_id, false);
+                }else{
+                  // ２回目トライ
+                  console.log("polling:error");
+                  document.getElementById("seko_comment").innerText = "失敗！";
+                  polling(level, getRoomId(level), true);
+                }
               }
             }
+          } else {
+            document.getElementById("seko_comment").innerText = "失敗！";
+            polling(level, getRoomId(level), true);
           }
-        } else {
-          document.getElementById("seko_comment").innerText = "失敗！";
-          polling(level, getRoomId(level), true);
         }
       }
-    }
-    xhr.open("GET","https://www.showroom-live.com/api/live/polling?room_id="+room_id, false);
-    xhr.send();
+      xhr.open("GET","https://www.showroom-live.com/api/live/polling?room_id="+room_id, false);
+      xhr.send();
+    }, first ? 0 : 30000);
   }
