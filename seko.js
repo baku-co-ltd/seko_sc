@@ -140,35 +140,3 @@ function polling(level, room_id=null, first=true){
     xhr.open("GET","https://www.showroom-live.com/api/live/polling?room_id="+room_id, false);
     xhr.send();
   }
-
-var div = document.createElement("div");
-div.id = "seko_comment";
-div.innerText = "待機中";
-div.style = "position: absolute; top: 40vh; right: 5vw; margin: 0; z-index: 1000;";
-div.classList = ["btn btn-lg btn-secondary px-4"];
-document.body.appendChild(div);
-var btn1 = document.createElement("button");
-btn1.innerText = "星回収";
-btn1.onclick = function(){polling(1);};
-btn1.style = "position: absolute; top: 50vh; right: 5vw; margin: 0; z-index: 1000;";
-btn1.classList = ["btn btn-lg btn-primary px-4"];
-document.body.appendChild(btn1);
-var div1 = document.createElement("div");
-div1.id = "seko_star_count";
-div1.innerText = " - ";
-div1.style = "position: absolute; top: 50vh; right: 40vw; margin: 0; z-index: 1000;";
-div1.classList = ["btn btn-lg btn-secondary"];
-document.body.appendChild(div1);
-var btn2 = document.createElement("button");
-btn2.innerText = "種回収";
-btn2.onclick = function(){polling(0);};
-btn2.style = "position: absolute; top: 60vh; right: 5vw; margin: 0; z-index: 1000;";
-btn2.classList = ["btn btn-lg btn-primary px-4"];
-document.body.appendChild(btn2);
-var div2 = document.createElement("div");
-div2.id = "seko_seed_count";
-div2.innerText = " - ";
-div2.style = "position: absolute; top: 60vh; right: 40vw; margin: 0; z-index: 1000;";
-div2.classList = ["btn btn-lg btn-secondary"];
-document.body.appendChild(div2);
-completion(0);
