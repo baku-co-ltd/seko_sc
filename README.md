@@ -12,8 +12,8 @@
 
 1. 設定 ＞ ショートカット ＞ 信頼されていないショートカットを許可
 1. [せこせこショートカット](https://www.icloud.com/shortcuts/ecdcae6eea27449b88b73ee8d3824d6d)を入手
-1. マイショートカットに追加された「せこせこ」の右上の<img src="menu.png" width="25px" style="border:0; box-shadow:0px 0px; margin:0; vertical-align: bottom;">を開く
-1. さらに開いた詳細画面の右上の<img src="menu.png" width="25px" style="border:0; box-shadow:0px 0px; margin:0; vertical-align: bottom;">を開く
+1. マイショートカットに追加された「せこせこ」の右上の<img src="menu.png" width="15px" style="border:0; box-shadow:0px 0px; margin:0; vertical-align: bottom;">を開く
+1. さらに開いた詳細画面の右上の<img src="menu.png" width="15px" style="border:0; box-shadow:0px 0px; margin:0; vertical-align: bottom;">を開く
 1. 「共有シートに表示」をONにする
 1. Safariを開いてSHOWROOMにログインする
 1. 配信画面で共有シートから「せこせこ」を選択
