@@ -12,7 +12,7 @@
 
 1. 設定 ＞ ショートカット ＞ 信頼されていないショートカットを許可
 1. [ここ](https://www.icloud.com/shortcuts/6da73fba52ff4a379f6f1918fe0018fe)からショートカットを入手
-1. マイショートカットに追加された「せこせこ」の右上の<img src="menu.png" width="15px" border="0">を開く
+1. マイショートカットに追加された「せこせこ」の右上の<img src="menu.png" width="15px" style="border:0; box-shadow:0px 0px;">を開く
 1. さらに開いた詳細画面の右上の<img src="menu.png" width="15px" border="0">を開く
 1. 「共有シートに表示」をONにする
 1. Safariを開いてSHOWROOMにログインする
