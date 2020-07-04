@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+## せこせこショートカットの使い方
 
-You can use the [editor on GitHub](https://github.com/baku-co-ltd/seko_sc/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+せこせこショートカットはSafariでSHOWROOMを見ながら全自動で星・種集めをするショートカットです。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 環境
 
-### Markdown
+- iOS13以上であること。
+- [ショートカット](https://apps.apple.com/jp/app/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88/id1462947752)がインストールされていること。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### 事前準備
 
-# Header 1
-## Header 2
-### Header 3
+1. 設定 ＞ ショートカット ＞ 信頼されていないショートカットを許可
+1. [ここ](https://www.icloud.com/shortcuts/6da73fba52ff4a379f6f1918fe0018fe)からショートカットを入手
+1. マイショートカットに追加された「せこせこ」の右上の(・・・)メニューを開く
+1. さらに開いた詳細画面の右上の(・・・)メニューを開く
+1. 「共有シートに表示」をONにする
+1. Safariを開いてSHOWROOMにログインする
+1. 配信画面で共有シートから「せこせこ」を選択
+1. ボタンが表示されれば準備完了です
 
-- Bulleted
-- List
+### 使い方
 
-1. Numbered
-2. List
+- 星/種回収ボタンを押すと99個集まるか制限がかかるまで星/種を自動で集めてくれます
+- カウント機能と星/種投げ昨日は準備中です
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/baku-co-ltd/seko_sc/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+![Image](src)
